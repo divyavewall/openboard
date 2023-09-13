@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="styles.css">
+    <title>OPEN BOARD</title>
+</head>
+<body>
+    <!-- hamburger icon -->
+    <div class="options-container">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="tools-container scale-tools">
+        <img class = "pencil" src="icons/pencil.png">
+        <img class = "eraser" src="icons/eraser.png">
+        <img class = "upload" src="icons/upload.png">
+        <img class = "sticky-note" src="icons/sticky-note.png">
+        <img class = "download" src="icons/download.png">
+        <img class = "undo" src="icons/undo.png">
+        <img class = "redo" src="icons/redo (2).png">
+    </div>
+    <div class="pencil-tool-container">
+        <div class="pencil-width-container">
+            <input type="range" min="2" max="10" value="2" class = "pencil-width">
+        </div>
+        <div class="pencil-color-container">
+            <div class="black pencil-color"></div>
+            <div class="green pencil-color"></div>
+            <div class="blue pencil-color"></div>
+            <div class="red pencil-color"></div>
+            <div class="orangered pencil-color"></div>
+            <div class="orange pencil-color"></div> 
+            <div class="purple pencil-color"></div>      
+        </div>
+    </div>
+    <div class="eraser-tool-container">
+         <input type="range" min="2" max="10" value="5" class = "eraser-width">
+    </div>
+    <canvas></canvas>
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" 
+    integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+    <script>
+        let socket = io.connect("http://localhost:3000");
+    </script>
+    <script src="./tools.js"></script>
+    <script src="./canvas.js"></script>
+</body>
+</html>
